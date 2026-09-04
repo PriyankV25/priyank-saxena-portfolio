@@ -2615,6 +2615,91 @@
             }
         }
 
+/* ================================
+   Certificate Search Animation
+   ================================ */
+
+.cert-grid {
+    position: relative;
+    transition: height .45s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Cards entering after search/filter */
+.cert-grid .cert.cert-enter {
+    opacity: 0;
+    transform: translateY(22px) scale(.96);
+    filter: blur(8px);
+}
+
+.cert-grid .cert.cert-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition:
+        opacity .5s ease,
+        transform .65s cubic-bezier(.22, 1, .36, 1),
+        filter .55s ease;
+}
+
+/* Cards leaving before results are replaced */
+.cert-grid .cert.cert-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.cert-grid .cert.cert-exit-active {
+    opacity: 0;
+    transform: translateY(-12px) scale(.94);
+    filter: blur(7px);
+    transition:
+        opacity .3s ease,
+        transform .4s cubic-bezier(.22, 1, .36, 1),
+        filter .35s ease;
+    pointer-events: none;
+}
+
+/* Subtle image movement during entrance */
+.cert-grid .cert-enter .cert-thumb img {
+    transform: scale(1.06);
+    transition: transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.cert-grid .cert-enter-active .cert-thumb img {
+    transform: scale(1);
+}
+
+/* Prevent accidental horizontal overflow during animation */
+.cert-grid {
+    overflow: hidden;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .cert-grid,
+    .cert-grid .cert,
+    .cert-grid .cert-thumb img {
+        transition: none !important;
+        animation: none !important;
+        filter: none !important;
+        transform: none !important;
+    }
+}
+
+.search {
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+.search.is-searching {
+    transform: translateY(-1px);
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.04),
+        0 0 28px rgba(120,150,255,.12);
+}
+
 </style>
 </head>
 
@@ -2966,8 +3051,137 @@
 
         // Certificates
         const certGrid = document.getElementById('certGrid'), search = document.getElementById('certSearch'); let certs = [];
-        function renderCerts(filter = '') {certGrid.innerHTML = ''; const q = filter.trim().toLowerCase(); const list = certs.filter(c => c.title.toLowerCase().includes(q)); list.forEach(c => {const card = document.createElement('article'); card.className = 'glass cert reveal show'; card.innerHTML = `<div class="cert-thumb"><img loading="lazy" src="${encodeURI(c.thumb)}" alt="${c.title}"></div><div class="cert-info"><h3>${c.title}</h3><small>${c.type.toUpperCase()} · click to enlarge</small></div>`; card.addEventListener('click', () => openModal(c)); certGrid.appendChild(card)}); if (!list.length) certGrid.innerHTML = '<div class="glass" style="padding:25px;color:#9aa6bd;grid-column:1/-1">No certificates match that search.</div>'}
-        fetch('certificates.json').then(r => r.json()).then(data => {certs = data; renderCerts()}).catch(() => {certGrid.innerHTML = '<div class="glass" style="padding:25px;color:#9aa6bd;grid-column:1/-1">Certificate archive could not be loaded. Make sure the site is being served from a web server.</div>'}); search.addEventListener('input', () => renderCerts(search.value)); document.getElementById('showAll').addEventListener('click', () => {search.value = ''; renderCerts()});
+        // function renderCerts(filter = '') {certGrid.innerHTML = ''; const q = filter.trim().toLowerCase(); const list = certs.filter(c => c.title.toLowerCase().includes(q)); list.forEach(c => {const card = document.createElement('article'); card.className = 'glass cert reveal show'; card.innerHTML = `<div class="cert-thumb"><img loading="lazy" src="${encodeURI(c.thumb)}" alt="${c.title}"></div><div class="cert-info"><h3>${c.title}</h3><small>${c.type.toUpperCase()} · click to enlarge</small></div>`; card.addEventListener('click', () => openModal(c)); certGrid.appendChild(card)}); if (!list.length) certGrid.innerHTML = '<div class="glass" style="padding:25px;color:#9aa6bd;grid-column:1/-1">No certificates match that search.</div>'}
+        
+        function renderCerts(filter = '') {
+    const q = filter.trim().toLowerCase();
+
+    const list = certs.filter(c =>
+        c.title.toLowerCase().includes(q)
+    );
+
+    const oldCards = [...certGrid.querySelectorAll('.cert')];
+
+    /* --------------------------------
+       Animate current cards out
+       -------------------------------- */
+
+    if (oldCards.length) {
+        oldCards.forEach(card => {
+            card.classList.remove('cert-enter-active');
+            card.classList.add('cert-exit');
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    card.classList.add('cert-exit-active');
+                });
+            });
+        });
+    }
+
+    /* --------------------------------
+       Replace results after exit
+       -------------------------------- */
+
+    const replaceDelay = oldCards.length ? 180 : 0;
+
+    setTimeout(() => {
+
+        certGrid.innerHTML = '';
+
+        if (!list.length) {
+            const empty = document.createElement('div');
+
+            empty.className = 'glass';
+            empty.style.cssText =
+                'padding:25px;color:#9aa6bd;grid-column:1/-1';
+
+            empty.textContent =
+                'No certificates match that search.';
+
+            certGrid.appendChild(empty);
+
+            requestAnimationFrame(() => {
+                empty.style.opacity = '1';
+            });
+
+            return;
+        }
+
+        /* --------------------------------
+           Create new certificate cards
+           -------------------------------- */
+
+        list.forEach((c, index) => {
+
+            const card = document.createElement('article');
+
+            card.className =
+                'glass cert reveal show cert-enter';
+
+            card.style.transitionDelay =
+                `${Math.min(index * 45, 360)}ms`;
+
+            card.innerHTML = `
+                <div class="cert-thumb">
+                    <img
+                        loading="lazy"
+                        src="${encodeURI(c.thumb)}"
+                        alt="${c.title}"
+                    >
+                </div>
+
+                <div class="cert-info">
+                    <h3>${c.title}</h3>
+                    <small>
+                        ${c.type.toUpperCase()} · click to enlarge
+                    </small>
+                </div>
+            `;
+
+            card.addEventListener('click', () => openModal(c));
+
+            certGrid.appendChild(card);
+
+            /* Force browser to register initial state */
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    card.classList.remove('cert-enter');
+                    card.classList.add('cert-enter-active');
+                });
+            });
+        });
+
+    }, replaceDelay);
+}
+        
+        fetch('certificates.json').then(r => r.json()).then(data => {certs = data; renderCerts()}).catch(() => {certGrid.innerHTML = '<div class="glass" style="padding:25px;color:#9aa6bd;grid-column:1/-1">Certificate archive could not be loaded. Make sure the site is being served from a web server.</div>'}); 
+        // search.addEventListener('input', () => renderCerts(search.value)); 
+
+//         let searchTimer;
+
+// search.addEventListener('input', () => {
+//     clearTimeout(searchTimer);
+
+//     searchTimer = setTimeout(() => {
+//         renderCerts(search.value);
+//     }, 90);
+// });
+
+let searchTimer;
+
+search.addEventListener('input', () => {
+    search.classList.add('is-searching');
+
+    clearTimeout(searchTimer);
+
+    searchTimer = setTimeout(() => {
+        renderCerts(search.value);
+        search.classList.remove('is-searching');
+    }, 90);
+});
+
+        document.getElementById('showAll').addEventListener('click', () => {search.value = ''; renderCerts()});
         const modal = document.getElementById('modal'), modalImg = document.getElementById('modalImg'), modalTitle = document.getElementById('modalTitle'); function openModal(c) {modalImg.src = encodeURI(c.thumb); modalImg.alt = c.title; modalTitle.textContent = c.title; modal.classList.add('open')} function closeModal() {modal.classList.remove('open'); modalImg.src = ''} document.getElementById('close').onclick = closeModal; modal.addEventListener('click', e => {if (e.target === modal) closeModal()}); document.addEventListener('keydown', e => {if (e.key === 'Escape') closeModal()});
         // Contact: let the static form submit to FormSubmit. If user prefers, direct mailto link is available.
         const contactForm = document.getElementById('contactForm'); const success = document.getElementById('success'); const sendButton = contactForm?.querySelector('button[type=submit]'); if (contactForm) {const nextField = document.getElementById('formNext'); if (nextField)  nextField.value = `${window.location.origin}/thank-you.html`; contactForm.addEventListener('submit', () => {success.style.display = 'block'; if (sendButton) {sendButton.disabled = true; sendButton.textContent = 'Sending…';} });}
