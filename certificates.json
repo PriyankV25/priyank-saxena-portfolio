@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "rank": 1,
     "title": "Flask Python",
     "file": "assets/certificates/1665911230185.jpg",
     "thumb": "assets/certificate-thumbs/01.jpg",
@@ -8,6 +9,7 @@
   },
   {
     "id": 2,
+    "rank": 2,
     "title": "AI and Machine Learning workshop",
     "file": "assets/certificates/_certificate_77f2359f3fec83c34b7e0e25525ca667.pdf",
     "thumb": "assets/certificate-thumbs/02.jpg",
@@ -15,6 +17,7 @@
   },
   {
     "id": 3,
+    "rank": 3,
     "title": "AICTSD",
     "file": "assets/certificates/AICTSD-Student-27033.pdf",
     "thumb": "assets/certificate-thumbs/03.jpg",
@@ -22,6 +25,7 @@
   },
   {
     "id": 4,
+    "rank": 4,
     "title": "Artificial Intelligence Digital Marketing",
     "file": "assets/certificates/artificial-intelligence-digital-marketing-certificate.png",
     "thumb": "assets/certificate-thumbs/04.jpg",
@@ -29,6 +33,7 @@
   },
   {
     "id": 5,
+    "rank": 5,      
     "title": "AWS Training & Certification",
     "file": "assets/certificates/AWS Training & Certification - Certificate of Completion.pdf",
     "thumb": "assets/certificate-thumbs/05.jpg",
@@ -36,6 +41,7 @@
   },
   {
     "id": 8,
+    "rank": 8,
     "title": "career foundation certificate",
     "file": "assets/certificates/career_foundation_certificate.pdf",
     "thumb": "assets/certificate-thumbs/08.jpg",
@@ -43,6 +49,7 @@
   },
   {
     "id": 9,
+    "rank": 9,
     "title": "Startup India - upGrad",
     "file": "assets/certificates/certificate (1).pdf",
     "thumb": "assets/certificate-thumbs/09.jpg",
@@ -50,6 +57,7 @@
   },
   {
     "id": 10,
+    "rank": 10,
     "title": "Google-DeepMinds Reinforcement Learning",
     "file": "assets/certificates/certificate (4).pdf",
     "thumb": "assets/certificate-thumbs/10.jpg",
@@ -57,6 +65,7 @@
   },
   {
     "id": 11,
+    "rank": 11,
     "title": "Blockchain - Amity career fest",
     "file": "assets/certificates/Certificate amity career fest.pdf",
     "thumb": "assets/certificate-thumbs/11.jpg",
@@ -64,6 +73,7 @@
   },
   {
     "id": 12,
+    "rank": 12,
     "title": "National Level Quiz on NBA",
     "file": "assets/certificates/Certificate for Mr. Priyank Saxena for _National Level Quiz on NBA_.pdf",
     "thumb": "assets/certificate-thumbs/12.jpg",
@@ -71,6 +81,7 @@
   },
   {
     "id": 13,
+    "rank": 13,
     "title": "National Level Quiz on Nuclear and Particle Physics",
     "file": "assets/certificates/Certificate for Mr.Priyank Saxena for _Vijaya Mahantesh Krupaposhi..._.pdf",
     "thumb": "assets/certificate-thumbs/13.jpg",
@@ -78,6 +89,7 @@
   },
   {
     "id": 14,
+    "rank": 14,
     "title": "Webinar on Oracle Database",
     "file": "assets/certificates/Certificate for Priyank Saxena for __SQL_ Online Quiz_.pdf",
     "thumb": "assets/certificate-thumbs/14.jpg",
@@ -85,6 +97,7 @@
   },
   {
     "id": 15,
+    "rank": 15,
     "title": "Current Affair - UPSC",
     "file": "assets/certificates/Certificate for Priyank Saxena for _Current Affair_.pdf",
     "thumb": "assets/certificate-thumbs/15.jpg",
@@ -92,6 +105,7 @@
   },
   {
     "id": 16,
+    "rank": 16,
     "title": "Fundamentals of Data Science",
     "file": "assets/certificates/Certificate for Priyank Saxena for _Fundamentals of Data Science_.pdf",
     "thumb": "assets/certificate-thumbs/16.jpg",
@@ -99,6 +113,7 @@
   },
   {
     "id": 17,
+    "rank": 17,
     "title": "National Level e-Quiz on Physics",
     "file": "assets/certificates/Certificate for Priyank Saxena for _National Level e-Quiz on Ph..._.pdf",
     "thumb": "assets/certificate-thumbs/17.jpg",
@@ -106,6 +121,7 @@
   },
   {
     "id": 18,
+    "rank": 18,
     "title": "Quiz on Programming Skills",
     "file": "assets/certificates/Certificate for Priyank Saxena for _Online Quiz on Programming ..._.pdf",
     "thumb": "assets/certificate-thumbs/18.jpg",
@@ -113,6 +129,7 @@
   },
   {
     "id": 20,
+    "rank": 20,
     "title": "National Level Quiz on Python Programming",
     "file": "assets/certificates/Certificate for Priyank Saxena for _Sigma Institute of Engineer..._.pdf",
     "thumb": "assets/certificate-thumbs/20.jpg",
@@ -120,6 +137,7 @@
   },
   {
     "id": 21,
+    "rank": 21,
     "title": "National Level NCC Quiz",
     "file": "assets/certificates/Certificate for Priyank Saxena for _ST.CLARET COLLEGE_ (1).pdf",
     "thumb": "assets/certificate-thumbs/21.jpg",
@@ -127,6 +145,7 @@
   },
   {
     "id": 22,
+    "rank": 22,
     "title": "Decision Making in Cricket",
     "file": "assets/certificates/certificate-14448505-246972.pdf",
     "thumb": "assets/certificate-thumbs/22.jpg",
@@ -134,6 +153,7 @@
   },
   {
     "id": 23,
+    "rank": 23,
     "title": "Digital India by MeitY",
     "file": "assets/certificates/certificate.jpg",
     "thumb": "assets/certificate-thumbs/23.jpg",
@@ -141,6 +161,7 @@
   },
   {
     "id": 24,
+    "rank": 24,
     "title": "Blockchain Technology and Management",
     "file": "assets/certificates/Certificate.pdf",
     "thumb": "assets/certificate-thumbs/24.jpg",
@@ -148,6 +169,7 @@
   },
   {
     "id": 25,
+    "rank": 25,
     "title": "Overview of Web GIS Technology - ISRO & IIRS",
     "file": "assets/certificates/certificate_2021811031775.pdf",
     "thumb": "assets/certificate-thumbs/25.jpg",
@@ -155,6 +177,7 @@
   },
   {
     "id": 27,
+    "rank": 27,
     "title": "IFS - Forensic Investigation Quiz",
     "file": "assets/certificates/certificate_priyanksaxena_1594101593.jpg",
     "thumb": "assets/certificate-thumbs/27.jpg",
@@ -162,6 +185,7 @@
   },
   {
     "id": 28,
+    "rank": 28,
     "title": "Learning Python - LinkedIn",
     "file": "assets/certificates/CertificateOfCompletion_Learning Python.pdf",
     "thumb": "assets/certificate-thumbs/28.jpg",
@@ -169,6 +193,7 @@
   },
   {
     "id": 29,
+    "rank": 29,
     "title": "Computer Basic Exam Certificate",
     "file": "assets/certificates/Computer_Basic_Exam_Certificate.pdf",
     "thumb": "assets/certificate-thumbs/29.jpg",
@@ -176,6 +201,7 @@
   },
   {
     "id": 30,
+    "rank": 30,
     "title": "Technical Support Fundamentals - Google & Coursera",
     "file": "assets/certificates/Coursera K4PVFB3ZPH3A.pdf",
     "thumb": "assets/certificate-thumbs/30.jpg",
@@ -183,6 +209,7 @@
   },
   {
     "id": 32,
+    "rank": 32,
     "title": "Java(Basic) - HackerRank",
     "file": "assets/certificates/download.png",
     "thumb": "assets/certificate-thumbs/32.jpg",
@@ -190,6 +217,7 @@
   },
   {
     "id": 34,
+    "rank": 34,
     "title": "TASVEER - Photography",
     "file": "assets/certificates/FINAL  DESIGN (1).pdf",
     "thumb": "assets/certificate-thumbs/34.jpg",
@@ -197,6 +225,7 @@
   },
   {
     "id": 36,
+    "rank": 36,
     "title": "Virtual, Augmented and Mixed Reality - Lancaster University",
     "file": "assets/certificates/introduction-to-virtual-reality_certificate_of_achievement_k57ga5y.pdf",
     "thumb": "assets/certificate-thumbs/36.jpg",
@@ -204,6 +233,7 @@
   },
   {
     "id": 37,
+    "rank": 37,
     "title": "Artificial Intelligence Workshop - IIT Madras",
     "file": "assets/certificates/participation_certificate.pdf",
     "thumb": "assets/certificate-thumbs/37.jpg",
@@ -211,6 +241,7 @@
   },
   {
     "id": 38,
+    "rank": 38,
     "title": "DevFest India - Google Developer Groups",
     "file": "assets/certificates/Priyank Saxena-DevFest-India-2021-Certificate.pdf",
     "thumb": "assets/certificate-thumbs/38.jpg",
@@ -218,6 +249,7 @@
   },
   {
     "id": 39,
+    "rank": 39,
     "title": "Sports and Game Certificate",
     "file": "assets/certificates/Priyank-Assessment-on-Sports-and-Games-by-Sapphire-International-School-Sapphire-Sports-and-Game-Certificate-Edelytics-Online.pdf",
     "thumb": "assets/certificate-thumbs/39.jpg",
@@ -225,6 +257,7 @@
   },
   {
     "id": 41,
+    "rank": 41,
     "title": "Java Programming",
     "file": "assets/certificates/Priyank_558566.pdf",
     "thumb": "assets/certificate-thumbs/41.jpg",
@@ -232,6 +265,7 @@
   },
   {
     "id": 42,
+    "rank": 42,
     "title": "Linux Tutorial - Great Learning",
     "file": "assets/certificates/Priyank_Saxena20220704-5366-1g33x3z.jpg",
     "thumb": "assets/certificate-thumbs/42.jpg",
@@ -239,6 +273,7 @@
   },
   {
     "id": 44,
+    "rank": 44,
     "title": "Python - Udemy",
     "file": "assets/certificates/pythonCertificate2023.pdf",
     "thumb": "assets/certificate-thumbs/44.jpg",
@@ -246,6 +281,7 @@
   },
   {
     "id": 45,
+    "rank": 45,
     "title": "Basic of Python Programming - OpenWeaver",
     "file": "assets/certificates/Screenshot (12).png",
     "thumb": "assets/certificate-thumbs/45.jpg",
@@ -253,6 +289,7 @@
   },
   {
     "id": 46,
+    "rank": 46,
     "title": "C Language - Udemy",
     "file": "assets/certificates/UC-1ece4780-a79b-4982-a7e8-c6f9a70d6520.pdf",
     "thumb": "assets/certificate-thumbs/46.jpg",
@@ -260,6 +297,7 @@
   },
   {
     "id": 47,
+    "rank": 47,
     "title": "Java - Udemy",
     "file": "assets/certificates/UC-41c275b3-59a2-42a0-910d-37489b1f6ca4.pdf",
     "thumb": "assets/certificate-thumbs/47.jpg",
@@ -267,6 +305,7 @@
   },
   {
     "id": 48,
+    "rank": 48,
     "title": "Web Development - Udemy",
     "file": "assets/certificates/UC-a914955b-c715-41b0-842e-78a82f5854c3.jpg",
     "thumb": "assets/certificate-thumbs/48.jpg",
@@ -274,6 +313,7 @@
   },
   {
     "id": 50,
+    "rank": 50,
     "title": "Web Development - Internshala",
     "file": "assets/certificates/Web Development Training - Certificate of Completion.pdf",
     "thumb": "assets/certificate-thumbs/50.jpg",
@@ -281,6 +321,7 @@
   },
   {
     "id": 51,
+    "rank": 51,
     "title": "FullStack Webinar",
     "file": "assets/certificates/webinar Certificate - 2021-05-02T163557.120.pdf",
     "thumb": "assets/certificate-thumbs/51.jpg",
@@ -288,6 +329,7 @@
   },
   {
     "id": 52,
+    "rank": 52,
     "title": "Investment Banking - J.P. Morgan",
     "file": "assets/certificates/YD2kY95RQxQtXxFTS_J.P. Morgan_5nZ48tLqN3Co2Rn4d_1626021654308_completion_certificate.pdf",
     "thumb": "assets/certificate-thumbs/52.jpg",
