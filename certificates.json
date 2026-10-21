@@ -334,5 +334,21 @@
     "file": "assets/certificates/YD2kY95RQxQtXxFTS_J.P. Morgan_5nZ48tLqN3Co2Rn4d_1626021654308_completion_certificate.pdf",
     "thumb": "assets/certificate-thumbs/52.jpg",
     "type": "pdf"
+  },
+  {
+    "id": 53,
+    "rank": 53,
+    "title": "Hacktoberfest 2026 - Completionist Certificate",
+    "file": "assets/certificates/Hacktoberfest 2026 - Completionist Certificate.pdf",
+    "thumb": "assets/certificate-thumbs/53.jpg",
+    "type": "pdf"
+  },
+  {
+    "id": 54,
+    "rank": 54,
+    "title": "Hacktoberfest 2026 - Completionist++",
+    "file": "assets/certificates/Hacktoberfest 2026 - Completionist++.pdf",
+    "thumb": "assets/certificate-thumbs/54.jpg",
+    "type": "pdf"
   }
 ]
