@@ -340,15 +340,15 @@
     "rank": 53,
     "title": "Hacktoberfest 2026 - Completionist Certificate",
     "file": "assets/certificates/Hacktoberfest 2026 - Completionist Certificate.pdf",
-    "thumb": "assets/certificate-thumbs/53.jpg",
+    "thumb": "assets/certificate-thumbs/53.png",
     "type": "pdf"
   },
   {
     "id": 54,
     "rank": 54,
-    "title": "Hacktoberfest 2026 - Completionist++",
+    "title": "Hacktoberfest 2026 - Completionist++ Certificate",
     "file": "assets/certificates/Hacktoberfest 2026 - Completionist++.pdf",
-    "thumb": "assets/certificate-thumbs/54.jpg",
+    "thumb": "assets/certificate-thumbs/54.png",
     "type": "pdf"
   }
 ]
